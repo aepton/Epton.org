@@ -1,1 +1,6 @@
 *.pyc
+img/
+data/
+*.png
+.DS_Store
+favicon.ico

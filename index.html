@@ -2,13 +2,61 @@
 
 {% block title %}Abraham Epton{% endblock title %}
 
+{% block library_css %}<link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css" rel="stylesheet">{% endblock library_css %}
+{% block css %}<link rel="stylesheet" type="text/css" href="/css/style.css" />{% endblock css %}
+
+{% block nav %}{% endblock nav %}
+
+{% block footer %}{% endblock footer %}
+
 {% block content %}
-<div class="container">
-  <div class="jumbotron">
-    <h1>Welcome to your new project!</h1>
-    <p>Replace this message with your own content in <code>{{ PROJECT_PATH }}/index.html</code>.</p>
-    <p>Learn more on the <a href="_example.html">example page</a>.</p>
-  </div>
+<div class="container-fluid">
+	<div class="row-fluid">
+        <div class="col-xs-12">
+            <img src="img/portrait.jpg" id="lead-image">
+        </div>
+    </div>
+    <div class="row-fluid" id="intro">
+        <div class="col-xs-12 col-md-8 col-md-offset-4">
+            <p>Hi. I'm Abraham Epton.</p>
+            <p>I'm a programmer and journalist.</p>
+        </div>
+    </div>
+    <div class="row-fluid" id="links">
+        <div class="container-fluid">
+            
+                <div class="row-fluid">
+                    <div class="col-xs-12 col-md-8 col-md-offset-4">
+                        <p><a href="http://twitter.com/aepton">@aepton</a></p>
+                    </div>
+                </div>
+            
+                <div class="row-fluid">
+                    <div class="col-xs-12 col-md-8 col-md-offset-4">
+                        <p><a href="/projects">projects</a></p>
+                    </div>
+                </div>
+            
+                <div class="row-fluid">
+                    <div class="col-xs-12 col-md-8 col-md-offset-4">
+                        <p><a href="http://github.com/aepton">github</a></p>
+                    </div>
+                </div>
+            
+                <div class="row-fluid">
+                    <div class="col-xs-12 col-md-8 col-md-offset-4">
+                        <p><a href="http://abe.epton.org">blog</a></p>
+                    </div>
+                </div>
+            
+                <div class="row-fluid">
+                    <div class="col-xs-12 col-md-8 col-md-offset-4">
+                        <p><a href="/data/resume.pdf">resume</a></p>
+                    </div>
+                </div>
+            
+        </div>
+    </div>
 </div>
 {% endblock content %}
 

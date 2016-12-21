@@ -1,0 +1,37 @@
+{% extends "_base.html" %}
+
+{% block title %}Abraham Epton's projects{% endblock title %}
+
+{% block library_css %}<link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css" rel="stylesheet">{% endblock library_css %}
+{% block css %}<link rel="stylesheet" type="text/css" href="/css/style.css" />{% endblock css %}
+
+{% block nav %}{% endblock nav %}
+
+{% block footer %}{% endblock footer %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="col-xs-12 col-md-8 col-md-offset-4">
+            <h3>Some favorite projects</h3>
+        </div>
+    </div>
+    {% for favorite in favorites %}
+        <div class="row-fluid">
+            {% if favorite.thumb_url %}
+                <div class="col-md-4 clip-row">
+                        <a href="{{ favorite.url }}"><img src="{{ favorite.thumb_url }}" class="clip-thumb"></a>
+                </div>            
+            {% endif %}
+            <div class="{% if favorite.thumb_url %}col-md-8{% else %}col-md-8 col-md-offset-2{% endif %} clip-row">
+                <h4><a href="{{ favorite.url }}">{{ favorite.title }}</a></h4>
+                <p class="dateline">{{ favorite.date }}</p>
+                <p>{{ favorite.description }}</p>
+            </div>
+        </div>
+        <div class="clearfix">
+        </div>
+    {% endfor %}
+</div>
+{% endblock content %}
+
